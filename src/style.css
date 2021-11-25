@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap");
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background: linear-gradient(45deg, #536db9, #c57373);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator-wrap {
+    background: linear-gradient(to top, #3e424d, #1c2029);
+    box-shadow: -2px -2px 15px #ffdafa85, 2px 2px 11px black;
+    /* 3e424d to 1c2029 */
+    padding: 1.5rem 1rem;
+    border-radius: 0.9rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 4rem);
+    grid-template-rows: minmax(6rem, auto) repeat(5, 4rem);
+}
+.display {
+    grid-area: 1/1/2/5;
+    font-family: "Roboto Mono", monospace;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    color: white;
+}
+.prev-display {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.current-display {
+    font-size: 2rem;
+    font-weight: 400;
+}
+button {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 6px 0px #0000007f, -2px -2px 5px -2px #bdbbdb7f;
+    background: linear-gradient(325deg, #ffffff11, #00000022);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+button:hover {
+    background-color: #fff2;
+}
+.span-2 {
+    grid-column: span 2;
+}
+.clear {
+    background: linear-gradient(325deg, #e71414ce, #7e0707e1);
+    box-shadow: 2px 2px 6px 0px #2e0202e6, -2px -2px 5px -2px #ff6565;
+    border: 3px solid #8b1616;
+}
+.clear:hover {
+    background-color: #fff7;
+    border: 3px solid #a01e1e;
+}
+.operation {
+    background: linear-gradient(325deg, #eea70ece, #bb5f02e1);
+    box-shadow: 2px 2px 6px 0px #2e1605, -2px -2px 6px -1px #df8a22;
+    border: 3px solid #b36f1c;
+}
+.operation:hover {
+    background-color: #fff7;
+    border: 3px solid #ca7e20;
+}
