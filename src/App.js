@@ -15,9 +15,9 @@ export default function App() {
             case "+":
                 return a + b;
             case "-":
-                return a - b;
+                return Math.round((a - b) * 100) / 100;
             case "*":
-                return a * b;
+                return Math.round(a * b * 100) / 100;
             case "÷":
                 return Math.round((a / b) * 100) / 100;
             default:
