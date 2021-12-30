@@ -31,6 +31,7 @@ body {
     align-items: flex-end;
     justify-content: space-around;
     color: white;
+    overflow-wrap: anywhere;
 }
 .prev-display {
     font-size: 1.2rem;
@@ -39,40 +40,52 @@ body {
 .current-display {
     font-size: 2rem;
     font-weight: 400;
+    text-align: right;
 }
 button {
     font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
     font-weight: 300;
     border: none;
-    border-radius: 0.5rem;
-    box-shadow: 2px 2px 6px 0px #0000007f, -2px -2px 5px -2px #bdbbdb7f;
-    background: linear-gradient(325deg, #ffffff11, #00000022);
+    border-radius: 0.8rem;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+    /* bevel effects */
+    background: linear-gradient(325deg, #a2acc0c4, #2b303aa6);
+    box-shadow: 2px 2px 9px 0px #131826, -2px -2px 7px -1px rgb(78 90 115),
+        inset 2px 2px 10px -2px rgb(136 141 151),
+        inset -2px -2px 6px 0px #14161d;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 button:hover {
-    background-color: #fff2;
+    background-color: hsl(0deg 0% 5%);
+    box-shadow: 2px 2px 6px 0px #131826, -2px -2px 5px -1px hsl(222deg 19% 38%),
+        inset 2px 2px 10px -2px #9da6b8, inset -2px -2px 6px 0px #030405;
 }
+
 .span-2 {
     grid-column: span 2;
 }
 .clear {
-    background: linear-gradient(325deg, #e71414ce, #7e0707e1);
-    box-shadow: 2px 2px 6px 0px #2e0202e6, -2px -2px 5px -2px #ff6565;
-    border: 3px solid #8b1616;
+    background: linear-gradient(325deg, #d13232df, #470d0ddf);
+    background-color: #6a2929;
+    box-shadow: 2px 2px 9px 0px #131826, -2px -2px 7px -1px rgb(78, 90, 115),
+        inset 2px 2px 10px -2px #cb3f47, inset -2px -2px 6px 0px #2e0202e6;
+    transition: background-color 0.2s, box-shadow 0.2s;
 }
 .clear:hover {
-    background-color: #fff7;
-    border: 3px solid #a01e1e;
+    background-color: #97707d;
+    box-shadow: 2px 2px 5px 1px #131826, -2px -2px 5px -1px hsl(222deg 19% 38%),
+        inset 2px 2px 10px -2px #cb3f47, inset -2px -2px 6px 0px #2e0202e6;
 }
 .operation {
-    background: linear-gradient(325deg, #eea70ece, #bb5f02e1);
-    box-shadow: 2px 2px 6px 0px #2e1605, -2px -2px 6px -1px #df8a22;
-    border: 3px solid #b36f1c;
+    background: linear-gradient(325deg, #cb8d06de, #532d06de);
+    background-color: #c28b24;
+    box-shadow: 2px 2px 9px 0px #131826, -2px -2px 6px -1px rgb(78 90 115),
+        inset 2px 2px 10px -2px #e4a151, inset -2px -2px 10px -2px #270303;
 }
 .operation:hover {
-    background-color: #fff7;
-    border: 3px solid #ca7e20;
+    background-color: #ffc9c9;
+    box-shadow: 2px 2px 5px 1px #131826, -2px -2px 5px -1px hsl(222deg 19% 38%),
+        inset 2px 2px 10px -2px #e4a151, inset -2px -2px 6px 0px #270303;
 }
